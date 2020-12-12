@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html>
+<head>
+    <link rel="stylesheet" href="Task02Charts.css" type="text/css">
+</head>
+
+<body>
+
+    <form >
+ <fieldset>
+     <legend>Charts:</legend>
+    <input type="text" id="Firstname" />
+    <input type="number" min="0" id="Nfirst" value="20" />
+    <input type="color" value="#ff0000" id="Firstcolor" />
+    <br /><br>
+    <input type="text" id="Secdname" />
+    <input type="number" min="0" id="Nsecond" value="10" />
+    <input type="color" value="#00ff00" 
+           id="Secondcolor"/>
+    <br /><br/>
+    <input type="text" id="Thirdname" />
+    <input type="number" min="0" id="Nthird" value="5" />
+    <input type="color" value="#0000ff" id="Thirdcolor"/>
+    <br/><br/>
+     
+    <input type="text" id="Forthname" />
+    <input type="number" min="0" id="Nforth" value="5" />
+    <input type="color" value="#0ac1ff" id="Forthcolor" />
+    <br/><br/>
+    <input type="checkbox" id="PieChart" /> <label>Pie Chart</label>
+    <input type="checkbox" id="DoughChart" /> <label>Doughunt Chart</label><br>
+    <input type="checkbox" id="LineChart" /> <label>Line Chart</label>
+    <input type="checkbox" id="BarChart" /> <label>Bar Chart</label>
+    <br/><br/>
+    <button id="btnDraw">Draw</button>
+        </fieldset>
+        
+    </form>
+ <div id="checkDiv" class="text"></div>
+ <canvas id="MyCanvas" width="570" height="230"></canvas>
+    
+   <!--SVG--------------------------------------------------------->
+    
+    <svg width="1000" height="330">
+        <g id="container" fill="" stroke="black" stroke-width="0.5" >
+        <rect x="60" y="80" width="280" height="250" style="stroke-width:3;stroke:#000000;fill:none;" />
+         
+             <polyline id="MyPoly" points=""  fill="none"
+    style="stroke:black;" />
+   <polyline points="100,100 100,300 300,300" fill="none" stroke="black" stroke-width="2"/>
+             <text x="70" y="110" class="text">100</text>
+             
+
+    <line x1="100" y1="100" x2="300" y2="100" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="130" class="text">90</text>
+    <line x1="100" y1="120" x2="300" y2="120" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="150" class="text">80</text>
+     <line x1="100" y1="140" x2="300" y2="140" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="170" class="text">70</text>
+    <line x1="100" y1="160" x2="300" y2="160" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />    
+             <text x="70" y="190" class="text">60</text>
+    <line x1="100" y1="180" x2="300" y2="180" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="210" class="text">50</text>
+    <line x1="100" y1="200" x2="300" y2="200" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="230" class="text">40</text>
+     <line x1="100" y1="220" x2="300" y2="220" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="250" class="text">30</text>
+    <line x1="100" y1="240" x2="300" y2="240" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="270" class="text">20</text>
+     <line x1="100" y1="260" x2="300" y2="260" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="70" y="290" class="text">10</text>
+    <line x1="100" y1="280" x2="300" y2="280" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+      <!-- verticl lines-->       
+            <text x="70" y="305" class="text">0</text>
+             
+            
+            
+    <line x1="120" y1="300" x2="120" y2="100" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="100" y="320" id="txtTrack1" class="text"></text>
+
+     <line x1="170" y1="300" x2="170" y2="100" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="150" y="320" id="txtTrack2" class="text"></text>
+    <line x1="230" y1="300" x2="230" y2="100" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="210" y="320" id="txtTrack3" class="text"></text>
+    <line x1="280" y1="300" x2="280" y2="100" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+             <text x="260" y="320" id="txtTrack4" class="text"></text>
+    <line x1="300" y1="300" x2="300" y2="100" style="stroke:rgb(0,0,0);stroke-width:2;stroke-opacity:0.1" />
+
+        </g>
+         
+</svg>
+    <script src="Task02Charts.js"></script>
+
+
+
+    
+</body></html>
